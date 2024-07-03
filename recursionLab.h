@@ -8,14 +8,24 @@ using namespace std;
 //          lineOfStars(0) returns ""
 // You may not use a loop.
 string lineOfStars(int n) {
-	return "fixme";
+	if (n == 0){
+		return "";
+	}
+	else{
+		return "*" + lineOfStars(n-1);
+	}
 }
 
 // Write a function power() that will
 //    compute the x to the power of n recursively
 // if the power is invalid, return 0
 float power(float x, int n) {
-	return -1;	
+	if (n == 0){
+		return 1;
+	}
+	else{
+		return x * power(x, n-1);
+	}
 }
 
 /*
